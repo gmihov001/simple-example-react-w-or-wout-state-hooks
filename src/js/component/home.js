@@ -10,7 +10,10 @@ export function Home() {
 			<h2>Example of state vs non-state (hook vs non-hook) behavior</h2>
 			<br />
 			<br />
-			This is my number: <h1>{numberHook}</h1>
+			This is my number with hook: <h1>{numberHook}</h1>
+			<br />
+			<br />
+			This is my number without hook: <h1>{number}</h1>
 			{/* if using simple variable 'number' the page does not re-render; switching to the hook variable 'numberHook' causes re-render and the displayed number updates */}
 			<br />
 			<br />
@@ -20,7 +23,8 @@ export function Home() {
 				onClick={() => {
 					number = 13;
 					setNumberHook(16);
-					console.log(number);
+					console.log("numberHook is: ", numberHook);
+					console.log("number is: ", number);
 				}}>
 				Change number
 			</button>
